@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --page-margins: 10vw;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #3334;
+}
+
+header {
+    padding: 0 var(--page-margins);
+    background-color: black;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    text-decoration: none;
+    letter-spacing: 1.3px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.logo div {
+    background-image: linear-gradient(45deg, lightgreen 50%, lightcoral 50%);
+    background-size: -800px;
+    background-clip: text;
+    color: transparent;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+main {
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    font-size: 1.3rem;
+    padding: 20px;
+    background-color: white;
+    margin: auto;
+    width: calc(100% - (var(--page-margins) * 2));
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+main h1 {
+    text-align: center;
+}
+
+main .categories-container {
+    margin-top: auto;
+    width: 100%;
+}
+
+main .categories-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.categories-container .categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 200px;
+    gap: 10px;
+}
+
+.categories .item {
+    background-color: #ccc6;
+    display: grid;
+    place-items: center;
+}
+
+/* Added Message */
+
+.error-text,
+.success-text {
+    padding: 20px 40px;
+    width: 60ch;
+    border-radius: 10px;
+    border: 2px solid var(--text-color);
+    text-align: center;
+}
+
+.error-text {
+    --text-color: rgb(231, 102, 102);
+}
+
+.success-text {
+    --text-color: rgb(102, 231, 109);
+}
+
+/* Sign Up Styles */
+
+.signup-text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+form {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+form .form-header {
+    text-align: center;
+    align-self: center;
+    margin-bottom: 15px;
+}
+
+form input:not(input[type="submit"]) {
+    padding-left: 5px;
+    flex: 0 0 30px;    
+}
+
+form input {
+}
+
+form input[type="submit"] {
+    flex: 0 0 40px;
+    font-size: 1.1rem;
+    appearance: none;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+
+    transition: background-color 100ms ease-in;
+}
+
+form input[type="submit"]:hover {
+    background-color: lightgreen;
+}
+
+footer {
+    padding: 10px 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    font-size: .9rem;
+    letter-spacing: 1.5px;
+}
